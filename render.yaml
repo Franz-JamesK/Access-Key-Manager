@@ -2,7 +2,7 @@ databases:
   - name: access_keydb
     plan: free
     databaseName: access_key
-    user: postgres
+    user: Franz-James Kaba
 
 services:
   - type: web
@@ -16,7 +16,7 @@ services:
         fromDatabase:
           name: access_key
           property: connectionString
-      - key: django-insecure-s+cn*-t82sfe#!izurzc%^3jla157^x-bo2p!r-7rr#wwm%xnt
+      - key: SECRET_KEY
         generateValue: true
       - key: WEB_CONCURRENCY
         value: 4
