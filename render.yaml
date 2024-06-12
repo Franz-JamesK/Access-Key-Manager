@@ -1,0 +1,22 @@
+databases:
+  - name: access_keydb
+    plan: free
+    databaseName: access_key
+    user: postgres
+
+services:
+  - type: web
+    plan: free
+    name: access_key
+    runtime: python
+    buildCommand: "./build.sh"
+    startCommand: "python -m gunicorn mysite.asgi:application -k uvicorn.workers.UvicornWorker"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: access_key
+          property: connectionString
+      - key: django-insecure-s+cn*-t82sfe#!izurzc%^3jla157^x-bo2p!r-7rr#wwm%xnt
+        generateValue: true
+      - key: WEB_CONCURRENCY
+        value: 4
