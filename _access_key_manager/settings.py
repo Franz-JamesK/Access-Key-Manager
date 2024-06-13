@@ -18,9 +18,9 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['accesskeybackend.onrender.com']
+ALLOWED_HOSTS = []
 
 # Email Configuration
 EMAIL_BACKEND = env('EMAIL_BACKEND')
@@ -95,11 +95,11 @@ WSGI_APPLICATION = '_access_key_manager.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': env('DB_NAME', default='your_db_name'),
-        'USER': env('DB_USER', default='your_db_user'),
-        'PASSWORD': env('DB_PASSWORD', default='your_db_password'),
+        'NAME': env('DB_NAME'),
+        'USER': env('DB_USER'),
+        'PASSWORD': env('DB_PASSWORD'),
         'HOST': env('DB_HOST', default='localhost'),
-        'PORT': env('DB_PORT', default='5432'),
+        'PORT': env('DB_PORT', default='5000'),
     }
 }
 
