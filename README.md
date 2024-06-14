@@ -17,7 +17,7 @@ Access Key Manager is a backend system designed to manage and secure access keys
 ## Technologies Used
 
 - Django
-- PostgreSQL
+- DB SQLite
 - Django Rest Framework
 - SMTP
 - Paystack
@@ -27,6 +27,6 @@ Access Key Manager is a backend system designed to manage and secure access keys
 ### Prerequisites
 
 - Python 3.x
-- PostgreSQL
+- DB SQLite
 - Git
 
